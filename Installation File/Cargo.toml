@@ -1,0 +1,22 @@
+[package]
+name = "paketci"
+version = "1.0.0"
+edition = "2021"
+description = "A universal package manager TUI for all Linux distributions"
+authors = ["Hypocrisy0040"]
+license = "GPL-3.0-or-later"
+repository = "https://github.com/Hypocrisy0040/paketci"
+
+[dependencies]
+ratatui = "0.26"
+crossterm = "0.27"
+anyhow = "1"
+strsim = "0.11"
+portable-pty = "0.8"
+vt100 = "0.15"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
